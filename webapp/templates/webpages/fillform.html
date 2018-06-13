@@ -32,67 +32,101 @@
 
 
   <style>
-        body {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
 
-        .pretty{
-          border-radius: 20px;
-          border-color: #00ff21;
-          text-align: center;
-          color: orange;
-        }
-    </style>
+  .fix{
+    padding-bottom: 7px;     /* Small juggad for navbar :P */
+  }
+  </style>
 </head>
 
 
 <body class="landing-page">
-  <nav class="navbar bg-white nav navbar-nav navbar-fixed-top nav-header" >
-      <span class="links-header pull-left" style="height: 0px;">
-          <a href="../index" class="sharpUnity fa-2x black" id="resume">CV Generator</a>
-      </span>
-      <span class="links-header text-right">
-          <a href="https://github.com/biswajee" id="github">
-              <i class="fa fa-2x fa-github" aria-hidden="true"></i>
-          </a>
-      </span>
+  <nav class="navbar bg-white nav navbar-nav navbar-fixed-top nav-header fix">
+    <span class="links-header pull-left" style="height: 0px;">
+      <a href="../index" class="sharpUnity fa-2x black" id="resume">CV Generator</a>
+    </span>
+    <span class="links-header text-right">
+      <a href="https://github.com/biswajee" id="github">
+        <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+      </a>
+    </span>
   </nav>
 
 
-<div class="landing-banner">
-  <form action="submit" method="post" enctype="multipart/form-data">
-    <div class = "row pad">
-      <div class = "col-md 12 col-sm-12 text-center">
-      <h1 class="head-banner-text">General information</h1>
-        <span>
-          Your name: <input type="text" class="pretty" name="nm" placeholder="Josh Gordon" />
-		        Your current position<input type="text" class="pretty" name="position" placeholder="Software Developer" />
-        </span>
-        <span>
-    Insitute name: <input type="text" class="pretty" name="univ" placeholder="some college" />
-		Session of study: <input type="text" class="pretty" name="session" placeholder="Enter your session" />
-  </span>
-  <span>
-  Phone number: <input type="text" class="pretty" name="ph" placeholder="Enter your Phone number" />
-		E-mail ID: <input type="text" class="pretty" name="email" placeholder="Enter your E-mail ID" />
-</span>
-    <input type="text" class="pretty" name="cph" placeholder="Enter University/College Phone number" />
-		<input type="text" class="pretty" name="cemail" placeholder="Enter University/College E-mail" />
-		<input type="text" class="pretty" name="fax" placeholder="Enter institute FAX" />
-		<label for="Describe"> Describe Yourself in Brief</label><br />
-		<textarea name="desc" placeholder="Describe Yourself..."></textarea>
-    </div>
-  </form>
-</div>
+  <div class="landing-banner">
+    <form action="submit" method="post" enctype="multipart/form-data">
+      <div class = "row pad pad-down pad-form-center">
+        <div class="col-md-5 col-sm-5 offset-sm-4 text-center bg-white borderify-login pad-lil">
+        <div class = "col-md-12 col-sm-12 text-center">
+          <h1 class="head-banner-text">General information</h1>
+        </div>
+        <br /><br />
+        <div class="input-group">
+          <span class="input-group-text">
+            Your name:
+          </span>
+          <input type="text" class="form-control has-success has-feedback" name="nm" placeholder="eg. Josh Gordon" />
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">
+            Your current position:
+          </span>
+          <input type="text" class="form-control has-success has-feedback" name="position" placeholder="Software Developer" />
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">
+            Insitute name: </span>
+            <input type="text" class="form-control has-success has-feedback" name="univ" placeholder="College name" />
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">
+              Session of study:
+            </span>
+            <input type="date" class="form-control has-success has-feedback" name="session" placeholder="Enter your session" />
+          </div>
+          <div class="input-group">
+            <span class="input-group-text">
+              Phone number: </span>
+              <input type="number" class="form-control has-success has-feedback" name="ph" placeholder="Enter your Phone number" />
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">
+                E-mail ID:
+              </span>
+              <input type="email" class="form-control has-success has-feedback" name="email" placeholder="Enter your E-mail ID" />
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">
+                Enter Institute Contact:
+              </span>
+              <input type="number" class="form-control has-success has-feedback" name="cph" placeholder="Enter University / College Phone number" />
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">
+                Enter Institute E-mail: </span>
+                <input type="email" class="form-control has-success has-feedback" name="cemail" placeholder="Enter University / College E-mail" />
+              </div>
+              <div class="input-group">
+                <span class="input-group-text">
+              Describe Yourself in Brief</span>
+              <textarea name="desc" class="form-control has-success has-feedback" placeholder="Describe Yourself..."></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      </div>
 
 
 
-</body>
-</html>
+    </body>
+    </html>
