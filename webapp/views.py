@@ -14,6 +14,10 @@ def signup(request):
 def signin(request):
     return render(request, 'webpages/signin.html')
 
+
+def formfill(request):
+    return render(request, 'webpages/fillform.html')
+
 def profile(request):
-    
+
     return render(request, 'webpages/signin.html')

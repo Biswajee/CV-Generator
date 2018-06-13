@@ -1,0 +1,98 @@
+<!doctype html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+
+  <title>
+    CV Generator - Form filling  !
+  </title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta title="Bag your first impression with impressive resume at your fingertips !" />
+  <meta name="description" content="Generate your resume just by filling up a application form or a survey about you ! Yes, we'll take care of all formatting ! Get a better niche with this lucid curriculum vitae !" />
+  <meta name="keywords" content="cv, resume, curriculum vitae, generate resume, my resume, cv generator, application, generate" />
+  <meta name="theme-color" content="#f2920c" />
+  <link href="{% static 'images/favicon.png' %}" rel="shortcut icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script>-->
+  <script src="{% static 'js/parallax.min.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/custom_css.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{%static 'css/slick.css' %}" />
+  <script src="{% static 'js/slick.js' %}"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Slab" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.min.css' %}" />
+
+
+
+  <style>
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .pretty{
+          border-radius: 20px;
+          border-color: #00ff21;
+          text-align: center;
+          color: orange;
+        }
+    </style>
+</head>
+
+
+<body class="landing-page">
+  <nav class="navbar bg-white nav navbar-nav navbar-fixed-top nav-header" >
+      <span class="links-header pull-left" style="height: 0px;">
+          <a href="../index" class="sharpUnity fa-2x black" id="resume">CV Generator</a>
+      </span>
+      <span class="links-header text-right">
+          <a href="https://github.com/biswajee" id="github">
+              <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+          </a>
+      </span>
+  </nav>
+
+
+<div class="landing-banner">
+  <form action="submit" method="post" enctype="multipart/form-data">
+    <div class = "row pad">
+      <div class = "col-md 12 col-sm-12 text-center">
+      <h1 class="head-banner-text">General information</h1>
+        <span>
+          Your name: <input type="text" class="pretty" name="nm" placeholder="Josh Gordon" />
+		        Your current position<input type="text" class="pretty" name="position" placeholder="Software Developer" />
+        </span>
+        <span>
+    Insitute name: <input type="text" class="pretty" name="univ" placeholder="some college" />
+		Session of study: <input type="text" class="pretty" name="session" placeholder="Enter your session" />
+  </span>
+  <span>
+  Phone number: <input type="text" class="pretty" name="ph" placeholder="Enter your Phone number" />
+		E-mail ID: <input type="text" class="pretty" name="email" placeholder="Enter your E-mail ID" />
+</span>
+    <input type="text" class="pretty" name="cph" placeholder="Enter University/College Phone number" />
+		<input type="text" class="pretty" name="cemail" placeholder="Enter University/College E-mail" />
+		<input type="text" class="pretty" name="fax" placeholder="Enter institute FAX" />
+		<label for="Describe"> Describe Yourself in Brief</label><br />
+		<textarea name="desc" placeholder="Describe Yourself..."></textarea>
+    </div>
+  </form>
+</div>
+
+
+
+</body>
+</html>
