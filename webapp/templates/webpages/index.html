@@ -1,0 +1,241 @@
+<!doctype html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+
+  <title>
+    BookmyTable
+  </title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta title="Spawn your cheapest ride with us" />
+  <meta name="description" content="Get the cheapest ride on roads by comparing prices across various cab companies and " />
+  <meta name="keywords" content="" />
+  <meta name="theme-color" content="#f2920c" />
+  <link href="{% static 'images/favicon.png' %}" rel="shortcut icon">
+
+  <!-- Core CSS files -->
+
+  <!--<script src="js/jquery.min.js"></script>-->
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script>-->
+  <script src="{% static 'js/parallax.min.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/custom_css.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{%static 'css/slick.css' %}" />
+  <script src="{% static 'js/slick.js' %}"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Slab" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.min.css' %}" />
+
+
+
+  <style>
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+
+<body class="landing-page">
+
+      <nav class="navbar navbar-dark bg-white nav navbar-nav navbar-fixed-top nav-header" >
+          <span class="links-header pull-left" style="height: 0px;">
+              <a href="#" class="sharpUnity fa-2x black" id="resume">BookmyTable</a>
+          </span>
+          <span class="links-header text-right">
+              <a href="../signin/" class="sharpUnity fa-2x black remove_U" id="mail">
+                  Sign in
+              </a>
+              <a href="https://github.com/biswajee" id="github">
+                  <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+              </a>
+              <!--
+              <a href="https://stackoverflow.com/users/7989544/biswajit-r" id="stackoverflow" class="remove_U">
+                  <i class="fa fa-2x fa-stack-overflow"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/devbiswajit" class="remove_U">
+                  <i class="fa fa-2x fa-linkedin-square" id="linkedin"></i>
+              </a>
+              <a href="https://fb.com/biswajee" id="facebook" class="remove_U">
+                  <i class="fa fa-2x fa-facebook-official"></i>
+              </a>
+              <a href="https://twitter.com/dev_biswajeet" id="twitter" class="remove_U">
+                  <i class="fa fa-2x fa-twitter"></i>
+              </a>
+            -->
+
+          </span>
+      </nav>
+
+
+
+      <div class="landing-banner parallax-window" data-parallax="scroll" data-image-src="{% static 'images/00000000383.jpg' %}">
+        <div class="overlay">
+          <div class="row pad-form-center">
+            <div class="col-md-4 col-sm-4 offset-sm-1 text-center bg-white borderify-login">
+              <form action="../dashboard/" method="post" style="padding-bottom: 20px;">
+                <p class="text-center">Enter your <b>Login Credentials.</b></p>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-user-o fa-pad"></i>Username</span>
+                      <input id="email" type="email" class="form-control has-success has-feedback" name="email" placeholder="Email"><br />
+                  </div>
+
+                  <br>
+
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-lock fa-pad"></i>Password</span>
+                      <input id="password" type="password" class="form-control has-success has-feedback" name="password" placeholder="Password"><br />
+                  </div>
+                  <p style="font-size: 0.7rem; padding-top: 3px; text-decoration: underline; align: right"><a href="../signup/">Create an account</a></p>
+
+                  <br>
+
+                  <button class="btn btn-success" type="submit" value="Submit" name="submit">Sign in</button>
+              </form>
+            </div>
+         </div>
+        </div>
+      </div>
+
+      <div class="row pad pad-down">
+        <div class="col-md-12 col-sm-12 text-center">
+          <h1 class="head-banner-text">
+          Take the ultimate pride on being foodie <i class="fa fa-heart red"></i> of the month !
+          </h1>
+          </div>
+      </div>
+
+      <div class="row pad pad-down iphone-banner">
+        <div class="col-md-3 col-sm-3 offset-sm-1 text-center">
+          <img src="/static/images/apple-phone.png" style="width: auto; height: 500px;">
+        </div>
+
+
+        <div class="col-md-7 col-sm-7 pad-plan-box">
+          <div class="offset-sm-3 text-center bg-white borderify-login">
+          <form  style="padding-bottom: 20px; padding-right: 10px; padding-left: 10px;" action="../places">
+            <h2 style="font-family: 'Josefin Slab', serif; font-size: 1.5rem; font-weight: 600; padding-bottom: 10px;">Start plan right now !</h2>
+            <div class="input-group">
+              <span class="input-group-text">
+              <i class="fa fa-map-marker fa-pad red"></i>
+              </span>
+            <input type="text" id="init-loc" placeholder="Pick up Location" id = "pick" class="form-control has-success has-feedback" onFocus="geolocate()">
+
+            <img src="{% static 'images/locationicon.png' %}" alt="get-location" style="padding-top: 5px; padding-bottom: -5px; height: 22px; width: 22px;">
+          </div>
+          <br>
+          <div class="input-group">
+              <span class="input-group-text">
+              <i class="fa fa-map-marker fa-pad blue"></i>
+            </span>
+              <input type="text" placeholder="Drop Location" id = "drop" class="form-control has-success has-feedback">
+          </div>
+          <br>
+          <button class="btn btn-success" type="submit" value=document.getElementById('pick') name="query">Check Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br><br><br>
+
+      <div class="row padmini pad-down parallax-window" data-parallax="scroll" data-image-src="{% static 'images/mdscene.jpg' %}">
+        <div class="col-md-12 col-sm-12 text-center">
+          <h1 class="head-banner-text">
+            How it works ?
+          </h1>
+          <h2 style="font-size: 1.5rem;">
+            So, it goes somewhat like this. You say your dining plans for the day to us and whether it
+            be a tired return from office or a get together plan out or a sunday hangout, we will serve
+            you your meal at your time as you please.
+            <br><br>
+            Well, Are you searching for a technical overview ? Then, this section is for you. We are
+            using various apis to provide you a wide range of results and prices from various cab, fooding
+            and lodging services to provide you the needful at your best budget !
+          </h2>
+          <div class="row pad" id="read-the-docs">
+            <div class="col-md-12 col-sm-12 text-center">
+              <h2 style="font-size: 2.2rem; padding-bottom: 20px;"><a href="../read-docs/" class="border border-success read-docs">Read Developer Docs</a></h2>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="pad-extra pad-down">
+    <footer class="footer  text-center">
+      <h3 style="font-size: 1rem;">&copy; BookmyTable 2018 &middot; All Rights Reserved &middot;</h3>
+      <h3 style="font-size: 1rem;">This site uses cookies. By using this website, you agree to abide by the terms and conditions of our Privacy Policy</h3>
+    </footer>
+    </div>
+
+    <script>
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
+
+      function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+
+          component = init-loc;
+          document.getElementById(component).value = '';
+          document.getElementById(component).disabled = false;
+      }
+
+      // Bias the autocomplete object to the user's geographical location,
+      // as supplied by the browser's 'navigator.geolocation' object.
+      function geolocate() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            /********************************/
+            console.log(geolocation.lat);
+            console.log(geolocation.lng);
+            /*******************************/
+
+            var pick_box = document.getElementById('init-loc');
+            pick_box.value = geolocation.lat + " , " + geolocation.lng;
+
+
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+          });
+        }
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ80V_YuV5MrkGIfjKye0IhzK9woKZnxc&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+</body>
+</html>

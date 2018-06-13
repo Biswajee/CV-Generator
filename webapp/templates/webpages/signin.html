@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <title>
+    Sign In - BookmyTable
+  </title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta title="Spawn your cheapest ride with us" />
+  <meta name="theme-color" content="#f2920c" />
+  <meta name="description" content="Get the cheapest ride on roads by comparing prices across various cab companies and " />
+  <meta name="keywords" content="" />
+  <link href="/static/images/favicon.png" rel="shortcut icon">
+
+  <!-- Core CSS files -->
+
+  <!--<script src="js/jquery.min.js"></script>-->
+
+
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/static/js/parallax.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+  <script src="/static/js/bootstrap.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/custom_css.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/slick.css" />
+  <script src="/static/js/slick.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Slab" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+
+
+  <style>
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="landing-page">
+
+      <nav class="navbar navbar-dark bg-white nav navbar-nav navbar-fixed-top nav-header" >
+          <span class="links-header pull-left" style="height: 0px;">
+              <a href="https://bookmyTable.ml" class="sharpUnity fa-2x black" id="resume">BookmyTable Home</a>
+          </span>
+          <span class="links-header text-right">
+              <a href="https://bookmyTable.ml/login" class="sharpUnity fa-2x black remove_U" id="mail">
+                  Sign in
+              </a>
+              <a href="https://github.com/biswajee" id="github">
+                  <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+              </a>
+              <!--
+              <a href="https://stackoverflow.com/users/7989544/biswajit-r" id="stackoverflow" class="remove_U">
+                  <i class="fa fa-2x fa-stack-overflow"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/devbiswajit" class="remove_U">
+                  <i class="fa fa-2x fa-linkedin-square" id="linkedin"></i>
+              </a>
+              <a href="https://fb.com/biswajee" id="facebook" class="remove_U">
+                  <i class="fa fa-2x fa-facebook-official"></i>
+              </a>
+              <a href="https://twitter.com/dev_biswajeet" id="twitter" class="remove_U">
+                  <i class="fa fa-2x fa-twitter"></i>
+              </a>
+            -->
+
+          </span>
+      </nav>
+
+
+      <div class="landing-banner parallax-window" data-parallax="scroll" data-image-src="/static/images/pbeach.jpg">
+        <div class="overlay">
+          <div class="row pad-form-center">
+            <div class="col-md-5 col-sm-5 offset-sm-4 text-center bg-white borderify-login">
+              <form action="localhost:5000/request" method="post" style="padding-bottom: 20px;">
+                <p class="text-center">Log in to  <b>your account.</b></p>
+
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-envelope fa-pad"></i>Email</span>
+                      <input id="email" type="email" class="form-control has-success has-feedback" name="email" placeholder="Enter Email"><br />
+                  </div>
+
+                  <br>
+
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fa fa-lock fa-pad"></i>Password</span>
+                      <input id="password" type="password" class="form-control has-success has-feedback" name="password" placeholder="Enter Password"><br />
+                  </div>
+
+                  <br>
+
+
+                  <p style="font-size: 0.7rem; padding-top: 3px; align: right">Don't have an account ? <a href="../signup/">Sign Up</a></p>
+
+                  <br>
+
+                  <!--<progress class="progress-bar-animated"></progress>-->
+
+                  <button class="btn btn-success" type="submit" value="Submit" name="submit">Login now</button>
+              </form>
+            </div>
+         </div>
+        </div>
+      </div>
+
+      <div class="pad-extra pad-down">
+      <footer class="footer  text-center">
+        <h3 style="font-size: 1rem;">&copy; BookmyTable 2018 &middot; All Rights Reserved &middot;</h3>
+      </footer>
+      </div>
+
+    </body>
+</html>
