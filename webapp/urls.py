@@ -6,5 +6,6 @@ urlpatterns = [
     url('signup/', views.signup, name = 'signup'),
     url('signin/', views.signin, name = 'signin'),
     url('form/', views.formfill, name = 'formfillup'),
-    url('profile/', views.profile, name = 'profile viewer')
+    url('profile/', views.profile, name = 'profile viewer'),
+    url('read-docs/', views.read_docs, name = 'Developer guide')
 ]
