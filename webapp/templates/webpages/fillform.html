@@ -64,98 +64,165 @@
 
 
 
-    <form action="submit" method="post" enctype="multipart/form-data">
-      <div class = "row pad-down pad-form-center">
-        <div class="col-md-5 col-sm-5 offset-sm-4 text-center bg-white borderify-login pad-lil">
-          <div class = "col-md-12 col-sm-12 text-center">
-            <h1 class="head-banner-text">General information</h1>
-          </div>
-          <br /><br />
-          <div class="input-group">
-            <span class="input-group-text">
-              Your name:
-            </span>
-            <input type="text" class="form-control has-success has-feedback" name="nm" placeholder="eg. Josh Gordon" />
+  <form action="submit" method="post" enctype="multipart/form-data">
+    <div class = "row pad-down pad-form-center">
+      <div class="col-md-5 col-sm-5 offset-sm-4 text-left bg-white borderify-login pad-lil">
+        <div class = "col-md-12 col-sm-12 text-center">
+          <h1 class="head-banner-text">General information</h1>
+        </div>
+        <br /><br />
+        <div class="input-group">
+          <span class="input-group-text">
+            Your name:
+          </span>
+          <input type="text" class="form-control has-success has-feedback" name="nm" placeholder="eg. Josh Gordon" />
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-text">
+            Your current position:
+          </span>
+          <input type="text" class="form-control has-success has-feedback" name="position" placeholder="Software Developer" />
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-text">
+            Insitute name: </span>
+            <input type="text" class="form-control has-success has-feedback" name="univ" placeholder="College name" />
           </div>
           <br>
           <div class="input-group">
             <span class="input-group-text">
-              Your current position:
+              Session of study:
             </span>
-            <input type="text" class="form-control has-success has-feedback" name="position" placeholder="Software Developer" />
+            <input type="date" class="form-control has-success has-feedback" name="session" placeholder="Enter your session" />
           </div>
           <br>
           <div class="input-group">
             <span class="input-group-text">
-              Insitute name: </span>
-              <input type="text" class="form-control has-success has-feedback" name="univ" placeholder="College name" />
+              Phone number: </span>
+              <input type="number" class="form-control has-success has-feedback" name="ph" placeholder="Enter your Phone number" />
             </div>
             <br>
             <div class="input-group">
               <span class="input-group-text">
-                Session of study:
+                E-mail ID:
               </span>
-              <input type="date" class="form-control has-success has-feedback" name="session" placeholder="Enter your session" />
+              <input type="email" class="form-control has-success has-feedback" name="email" placeholder="Enter your E-mail ID" />
             </div>
             <br>
             <div class="input-group">
               <span class="input-group-text">
-                Phone number: </span>
-                <input type="number" class="form-control has-success has-feedback" name="ph" placeholder="Enter your Phone number" />
+                Enter Institute Contact:
+              </span>
+              <input type="number" class="form-control has-success has-feedback" name="cph" placeholder="Enter University / College Phone number" />
+            </div>
+            <br>
+            <div class="input-group">
+              <span class="input-group-text">
+                Enter Institute E-mail: </span>
+                <input type="email" class="form-control has-success has-feedback" name="cemail" placeholder="Enter University / College E-mail" />
               </div>
               <br>
               <div class="input-group">
                 <span class="input-group-text">
-                  E-mail ID:
-                </span>
-                <input type="email" class="form-control has-success has-feedback" name="email" placeholder="Enter your E-mail ID" />
-              </div>
-              <br>
-              <div class="input-group">
-                <span class="input-group-text">
-                  Enter Institute Contact:
-                </span>
-                <input type="number" class="form-control has-success has-feedback" name="cph" placeholder="Enter University / College Phone number" />
-              </div>
-              <br>
-              <div class="input-group">
-                <span class="input-group-text">
-                  Enter Institute E-mail: </span>
-                  <input type="email" class="form-control has-success has-feedback" name="cemail" placeholder="Enter University / College E-mail" />
+                  Describe Yourself in Brief</span>
+                  <textarea name="desc" class="form-control has-success has-feedback" placeholder="Describe Yourself..."></textarea>
                 </div>
-                <br>
-                <div class="input-group">
-                  <span class="input-group-text">
-                    Describe Yourself in Brief</span>
-                    <textarea name="desc" class="form-control has-success has-feedback" placeholder="Describe Yourself..."></textarea>
+
+                <div class="row pad pad-down">
+                  <div class = "col-md-12 col-sm-12 text-center">
+                    <h1 class="head-banner-text">Academic Qualification</h1><br /><br />
                   </div>
 
-                  <div class="row pad pad-down">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      Enter current CGPA / Percentage
+                    </span>
+                    <input type="number" class="form-control has-success has-feedback" name="cgpa" placeholder="eg. 8.7 or 93" />
+                  </div>
+                </div>
+
+                <div class="row pad pad-down">
+                  <div class = "col-md-12 col-sm-12 text-center">
+                    <h1 class="head-banner-text">Skills and Experience</h1><br /><br />
+                  </div>
+
+                  <div>
                     <div class = "col-md-12 col-sm-12 text-center">
-                      <h1 class="head-banner-text">Academic Qualification</h1><br /><br />
+                      <h2>Enter your six best skill below</h2><br>
                     </div>
-
-                    <div class="input-group">
-                      <span class="input-group-text">
-                        Enter current CGPA / Percentage
-                      </span>
-                      <input type="number" class="form-control has-success has-feedback" name="cgpa" placeholder="eg. 8.7 or 93" />
-                    </div>
-
-
-                      </div>
-                    <!--end of form tags-->
+                    <input type="text" class="form-control has-success has-feedback" name="skill_1" placeholder="First Skill" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="skill_2" placeholder="Second Skill" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="skill_3" placeholder="Third Skill" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="skill_4" placeholder="Fourth Skill" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="skill_5" placeholder="Fifth Skill" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="skill_1" placeholder="Sixth Skill" /><br>
                   </div>
-                </form>
+                </div>
               </div>
-
-
-
-            <div class="pad-extra pad-down">
-              <footer class="footer  text-center">
-                <h3 style="font-size: 1rem;">&copy; CV Generator 2018 &middot; All Rights Reserved &middot;</h3>
-              </footer>
+              <div class="container">
+                <div class = "col-md-12 col-sm-12 text-center">
+                  <h2>Enter your Experiences and projects</h2><br>
+                </div>
+                <div class="row xborder">
+                  <div class="col-md-6 col-sm-6">
+                    <input type="text" class="form-control has-success has-feedback" name="xp_1_title" placeholder="First Experience" /><br>
+                    <input type="date" class="form-control has-success has-feedback" name="xp_1_session" placeholder="Enter start date" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="xp_1_desc" placeholder="Enter description" /><br>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <input type="text" class="form-control has-success has-feedback" name="xp_2_title" placeholder="Second Experience" /><br>
+                    <input type="date" class="form-control has-success has-feedback" name="xp_2_session" placeholder="Enter start date" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="xp_2_desc" placeholder="Enter description" /><br>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                    <input type="text" class="form-control has-success has-feedback" name="xp_3_title" placeholder="Third Experience" /><br>
+                    <input type="date" class="form-control has-success has-feedback" name="xp_3_session" placeholder="Enter start date" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="xp_3_desc" placeholder="Enter description" /><br>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <input type="text" class="form-control has-success has-feedback" name="xp_4_title" placeholder="Fourth Experience" /><br>
+                    <input type="date" class="form-control has-success has-feedback" name="xp_4_session" placeholder="Enter start date" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="xp_4_desc" placeholder="Enter description" /><br>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                    <input type="text" class="form-control has-success has-feedback" name="xp_5_title" placeholder="Fifth Experience" /><br>
+                    <input type="date" class="form-control has-success has-feedback" name="xp_5_session" placeholder="Enter start date" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="xp_5_desc" placeholder="Enter description" /><br>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <input type="text" class="form-control has-success has-feedback" name="xp_6_title" placeholder="Sixth Experience" /><br>
+                    <input type="date" class="form-control has-success has-feedback" name="xp_6_session" placeholder="Enter start date" /><br>
+                    <input type="text" class="form-control has-success has-feedback" name="xp_6_desc" placeholder="Enter description" /><br>
+                  </div>
+                </div>
+              <div class="row pad">
+                <div class="col-md-12 col-sm-12 text-center">
+                  <button class="btn btn-success" type="submit" value="Submit" name="submit">Submit form</button>
+                </div>
+              </div>
             </div>
 
-          </body>
-          </html>
+
+
+
+            <!--end of form tags-->
+
+          </form>
+        </div>
+
+
+
+        <div class="pad-extra pad-down">
+          <footer class="footer  text-center">
+            <h3 style="font-size: 1rem;">&copy; CV Generator 2018 &middot; All Rights Reserved &middot;</h3>
+          </footer>
+        </div>
+
+      </body>
+      </html>
