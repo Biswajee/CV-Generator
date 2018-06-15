@@ -64,7 +64,8 @@
 
 
 
-  <form action="submit" method="post" enctype="multipart/form-data">
+  <form action="../resume/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
     <div class = "row pad-down pad-form-center">
       <div class="col-md-5 col-sm-5 offset-sm-4 text-left bg-white borderify-login pad-lil">
         <div class = "col-md-12 col-sm-12 text-center">

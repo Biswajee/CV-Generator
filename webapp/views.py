@@ -38,56 +38,55 @@ def form_submit(request):
     template = jinja_env.get_template('resume.html')
 
     # Introduction vars
-    name = request.form['nm']
-    position = request.form['position']
-    univ = request.form['univ']
-    session = request.form['session']
-    email = request.form['email']
-    ph = request.form['ph']
-    cph = request.form['cph']
-    cemail = request.form['cemail']
-    fax = request.form['fax']
-    desc = request.form['desc']
+    name = request.POST['nm']
+    position = request.POST['position']
+    univ = request.POST['univ']
+    session = request.POST['session']
+    email = request.POST['email']
+    ph = request.POST['ph']
+    cph = request.POST['cph']
+    cemail = request.POST['cemail']
+    desc = request.POST['desc']
 
     # Academic Qualification
 
-    cgpa = request.form['cgpa']
+    cgpa = request.POST['cgpa']
 
     # Skill variables
 
-    skill_1 = request.form['skill_1']
-    skill_2 = request.form['skill_2']
-    skill_3 = request.form['skill_3']
-    skill_4 = request.form['skill_4']
-    skill_5 = request.form['skill_5']
-    skill_6 = request.form['skill_6']
+    skill_1 = request.POST['skill_1']
+    skill_2 = request.POST['skill_2']
+    skill_3 = request.POST['skill_3']
+    skill_4 = request.POST['skill_4']
+    skill_5 = request.POST['skill_5']
+    skill_6 = request.POST['skill_6']
 
 
     # Work Experience
 
-    xp_1_title = request.form['xp_1_title']
-    xp_1_session = request.form['xp_1_session']
-    xp_1_desc = request.form['xp_1_desc']
+    xp_1_title = request.POST['xp_1_title']
+    xp_1_session = request.POST['xp_1_session']
+    xp_1_desc = request.POST['xp_1_desc']
 
-    xp_2_title = request.form['xp_2_title']
-    xp_2_session = request.form['xp_2_session']
-    xp_2_desc = request.form['xp_2_desc']
+    xp_2_title = request.POST['xp_2_title']
+    xp_2_session = request.POST['xp_2_session']
+    xp_2_desc = request.POST['xp_2_desc']
 
-    xp_3_title = request.form['xp_3_title']
-    xp_3_session = request.form['xp_3_session']
-    xp_3_desc = request.form['xp_3_desc']
+    xp_3_title = request.POST['xp_3_title']
+    xp_3_session = request.POST['xp_3_session']
+    xp_3_desc = request.POST['xp_3_desc']
 
-    xp_4_title = request.form['xp_4_title']
-    xp_4_session = request.form['xp_4_session']
-    xp_4_desc = request.form['xp_4_desc']
+    xp_4_title = request.POST['xp_4_title']
+    xp_4_session = request.POST['xp_4_session']
+    xp_4_desc = request.POST['xp_4_desc']
 
-    xp_5_title = request.form['xp_5_title']
-    xp_5_session = request.form['xp_5_session']
-    xp_5_desc = request.form['xp_5_desc']
+    xp_5_title = request.POST['xp_5_title']
+    xp_5_session = request.POST['xp_5_session']
+    xp_5_desc = request.POST['xp_5_desc']
 
-    xp_6_title = request.form['xp_6_title']
-    xp_6_session = request.form['xp_6_session']
-    xp_6_desc = request.form['xp_6_desc']
+    xp_6_title = request.POST['xp_6_title']
+    xp_6_session = request.POST['xp_6_session']
+    xp_6_desc = request.POST['xp_6_desc']
 
     context = {
                 'name':name,
@@ -98,7 +97,6 @@ def form_submit(request):
                 'ph': ph,
                 'cph': cph,
                 'cemail': cemail,
-                'fax': fax,
                 'desc': desc,
                 'cgpa': cgpa,
                 'skill_1': skill_1,
@@ -128,4 +126,4 @@ def form_submit(request):
                 }
 
 
-    return render(request, 'webpages/resume.html', context)
+    return render(request, 'webpages/good_resume.html', context)

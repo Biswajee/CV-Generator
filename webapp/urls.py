@@ -5,8 +5,8 @@ urlpatterns = [
     url(r'^$', views.index, name = 'index'),
     url(r'signup/$', views.signup, name = 'signup'),
     url(r'signin/$', views.signin, name = 'signin'),
-    url('form/', views.formfill, name = 'formfillup'),
+    url(r'form/$', views.formfill, name = 'formfillup'),
     url('profile/', views.profile, name = 'profile viewer'),
     url(r'read-docs/$', views.read_docs, name = 'Developer guide'),
-    url(r'^submit/$', views.form_submit, name = 'Resume display')
+    url(r'resume/$', views.form_submit, name = 'Resume display')
 ]
