@@ -2,10 +2,11 @@ from django.conf.urls import url, re_path
 from . import views
 
 urlpatterns = [
-    url('index/', views.index, name = 'index'),
-    url('signup/', views.signup, name = 'signup'),
-    url('signin/', views.signin, name = 'signin'),
+    url(r'^$', views.index, name = 'index'),
+    url(r'signup/$', views.signup, name = 'signup'),
+    url(r'signin/$', views.signin, name = 'signin'),
     url('form/', views.formfill, name = 'formfillup'),
     url('profile/', views.profile, name = 'profile viewer'),
-    url('read-docs/', views.read_docs, name = 'Developer guide')
+    url(r'read-docs/$', views.read_docs, name = 'Developer guide'),
+    url(r'^submit/$', views.form_submit, name = 'Resume display')
 ]

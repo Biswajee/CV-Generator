@@ -1,4 +1,5 @@
 <!doctype html>
+{% load staticfiles %}
 <html lang="en">
 <head>
 
@@ -9,13 +10,11 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-  <meta title="Spawn your cheapest ride with us" />
-  <meta name="theme-color" content="#f2920c" />
   <meta title="Bag your first impression with impressive resume at your fingertips !" />
   <meta name="description" content="Generate your resume just by filling up a application form or a survey about you ! Yes, we'll take care of all formatting ! Get a better niche with this lucid curriculum vitae !" />
   <meta name="keywords" content="cv, resume, curriculum vitae, generate resume, my resume, cv generator, application, generate" />
   <meta name="theme-color" content="#f2920c" />
-  <link href="/static/images/favicon.png" rel="shortcut icon">
+  <link href="{% static 'images/favicon.png' %}" rel="shortcut icon">
 
   <!-- Core CSS files -->
 
@@ -53,7 +52,7 @@
 
       <nav class="navbar navbar-dark bg-white nav navbar-nav navbar-fixed-top nav-header" >
           <span class="links-header pull-left" style="height: 0px;">
-              <a href="../index/" class="sharpUnity fa-2x black" id="resume">CV Generator</a>
+              <a href="../" class="sharpUnity fa-2x black" id="resume">CV Generator</a>
           </span>
           <span class="links-header text-right">
               <a href="../signin/" class="sharpUnity fa-2x black remove_U" id="mail">
@@ -70,7 +69,7 @@
         <div class="overlay">
           <div class="row pad-form-center">
             <div class="col-md-5 col-sm-5 offset-sm-4 text-center bg-white borderify-login">
-              <form action="localhost:5000/request" method="post" style="padding-bottom: 20px;">
+              <form action="../form/" method="post" style="padding-bottom: 20px;">
                 <p class="text-center">Log in to  <b>your account.</b></p>
 
                   <div class="input-group">
@@ -103,7 +102,7 @@
 
       <div class="pad-extra pad-down">
       <footer class="footer  text-center">
-        <h3 style="font-size: 1rem;">&copy; BookmyTable 2018 &middot; All Rights Reserved &middot;</h3>
+        <h3 style="font-size: 1rem;">&copy; CV Generator 2018 &middot; All Rights Reserved &middot;</h3>
       </footer>
       </div>
 
