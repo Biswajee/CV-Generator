@@ -2,13 +2,6 @@ from django.shortcuts import render, get_object_or_404
 from django.template import loader
 from django.http import HttpResponse
 
-
-import os
-import jinja2
-template_dir = os.path.join(os.path.dirname(__file__), 'templates/webpages')
-jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape=True)
-
-
 # Create your views here.
 
 context = {}
@@ -35,7 +28,6 @@ def read_docs(request):
     return render(request, 'webpages/read_docs.html')
 
 def form_submit(request):
-    template = jinja_env.get_template('resume.html')
 
     # Introduction vars
     name = request.POST['nm']
