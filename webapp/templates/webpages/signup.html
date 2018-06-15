@@ -36,94 +36,94 @@
 
 
   <style>
-        body {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-    </style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  </style>
 </head>
 <body class="landing-page">
 
-      <nav class="navbar navbar-dark bg-white nav navbar-nav navbar-fixed-top nav-header" >
-          <span class="links-header pull-left" style="height: 0px;">
-              <a href="../" class="sharpUnity fa-2x black" id="resume">CV Generator</a>
-          </span>
-          <span class="links-header text-right">
-              <a href="../signin/" class="sharpUnity fa-2x black remove_U" id="mail">
-                  Sign in
-              </a>
-              <a href="https://github.com/biswajee" id="github">
-                  <i class="fa fa-2x fa-github" aria-hidden="true"></i>
-              </a>
-          </span>
-      </nav>
+  <nav class="navbar navbar-dark bg-white nav navbar-nav navbar-fixed-top nav-header" >
+    <span class="links-header pull-left" style="height: 0px;">
+      <a href="../" class="sharpUnity fa-2x black" id="resume">CV Generator</a>
+    </span>
+    <span class="links-header text-right">
+      <a href="../signin/" class="sharpUnity fa-2x black remove_U" id="mail">
+        Sign in
+      </a>
+      <a href="https://github.com/biswajee" id="github">
+        <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+      </a>
+    </span>
+  </nav>
 
 
-      <div class="landing-banner parallax-window" data-parallax="scroll" data-image-src="/static/images/pbeach.jpg">
-        <div class="overlay">
-          <div class="row pad-form-center">
-            <div class="col-md-5 col-sm-5 offset-sm-4 text-center bg-white borderify-login">
-              <form action="/webapp/form/" method="post" style="padding-bottom: 20px;">
+  <div class="landing-banner parallax-window" data-parallax="scroll" data-image-src="/static/images/pbeach.jpg">
+    <div class="overlay">
+      <div class="row pad-form-center">
+        <div class="col-md-5 col-sm-5 offset-sm-4 text-center bg-white borderify-login">
+          <form action="/webapp/form/" method="post" style="padding-bottom: 20px;">
 
-                <p class="text-center">Create a  <b>New user Account. {{data}}</b></p>
-                {% load widget_tweaks %}
-                                    {% csrf_token %}
-                                    {{ form.non_field_errors }}
-                  <div class="input-group">
-                    {{ form.fst_name.errors }}
-                    {{ form.lst_name.errors }}
-                    <span class="input-group-text"><i class="fa fa-address-card fa-pad"></i>Name</span>
-                      <input id="name" type="text" class="form-control has-success has-feedback" name="name" placeholder="Enter name">
-                  </div>
-
-                  <br>
-
-                  <div class="input-group">
-                    {{ form.eml.errors }}
-                    <span class="input-group-text"><i class="fa fa-envelope fa-pad"></i>Email</span>
-                      <input id="email" type="email" class="form-control has-success has-feedback" name="email" placeholder="Email">
-                  </div>
-
-                  <br>
-
-                  <div class="input-group">
-                    <span class="input-group-text"><i class="fa fa-lock fa-pad"></i>Password</span>
-                      <input id="password" type="password" class="form-control has-success has-feedback" name="password" placeholder="Password">
-                  </div>
-
-                  <br>
-
-                  <div class="input-group">
-                    <span class="input-group-text"><i class="fa fa-phone fa-pad"></i>Phone</span>
-                      <input id="phone" type="number" class="form-control has-success has-feedback" name="phone" placeholder="Enter phone number"><br />
-                  </div>
-
-                  <br>
-
-                  <p style="font-size: 0.7rem; padding-top: 3px; align: right">Already have an account ? <a href="../signin/">Sign in</a></p>
-
-                  <br>
-
-                  <!--<progress class="progress-bar-animated"></progress>-->
-
-                  <button class="btn btn-success" type="submit" value="Submit" name="submit">Register now</button>
-              </form>
+            <p class="text-center">Create a  <b>New user Account. {{data}}</b></p>
+            {% load widget_tweaks %}
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="input-group">
+              {{ form.fst_name.errors }}
+              {{ form.lst_name.errors }}
+              <span class="input-group-text"><i class="fa fa-address-card fa-pad"></i>Name</span>
+              <input id="name" type="text" class="form-control has-success has-feedback" name="name" placeholder="Enter name">
             </div>
-         </div>
+
+            <br>
+
+            <div class="input-group">
+              {{ form.eml.errors }}
+              <span class="input-group-text"><i class="fa fa-envelope fa-pad"></i>Email</span>
+              <input id="email" type="email" class="form-control has-success has-feedback" name="email" placeholder="Email">
+            </div>
+
+            <br>
+
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa fa-lock fa-pad"></i>Password</span>
+              <input id="password" type="password" class="form-control has-success has-feedback" name="password" placeholder="Password">
+            </div>
+
+            <br>
+
+            <div class="input-group">
+              <span class="input-group-text"><i class="fa fa-phone fa-pad"></i>Phone</span>
+              <input id="phone" type="number" class="form-control has-success has-feedback" name="phone" placeholder="Enter phone number"><br />
+            </div>
+
+            <br>
+
+            <p style="font-size: 0.7rem; padding-top: 3px; align: right">Already have an account ? <a href="../signin/">Sign in</a></p>
+
+            <br>
+
+            <!--<progress class="progress-bar-animated"></progress>-->
+
+            <button class="btn btn-success" type="submit" value="Submit" name="submit">Register now</button>
+          </form>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="pad-extra pad-down">
-      <footer class="footer  text-center">
-        <h3 style="font-size: 1rem;">&copy; CV Generator 2018 &middot; All Rights Reserved &middot;</h3>
-      </footer>
-      </div>
+  <div class="pad-extra pad-down">
+    <footer class="footer  text-center">
+      <h3 style="font-size: 1rem;">&copy; CV Generator 2018 &middot; All Rights Reserved &middot;</h3>
+    </footer>
+  </div>
 
-    </body>
+</body>
 </html>

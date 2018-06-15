@@ -70,6 +70,7 @@
           <div class="row pad-form-center">
             <div class="col-md-5 col-sm-5 offset-sm-4 text-center bg-white borderify-login">
               <form action="../form/" method="post" style="padding-bottom: 20px;">
+                {% csrf_token %}
                 <p class="text-center">Log in to  <b>your account.</b></p>
 
                   <div class="input-group">
