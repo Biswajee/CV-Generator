@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.template import loader
 from django.http import HttpResponse
+from flask import jsonify
 
 # Create your views here.
 
@@ -117,5 +118,9 @@ def form_submit(request):
                 'xp_6_desc': xp_6_desc,
                 }
 
-
     return render(request, 'webpages/good_resume.html', context)
+
+
+def form_json(request):
+    result = jsonify(context)
+    return result

@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'form/$', views.formfill, name = 'formfillup'),
     url('profile/', views.profile, name = 'profile viewer'),
     url(r'read-docs/$', views.read_docs, name = 'Developer guide'),
-    url(r'resume/$', views.form_submit, name = 'Resume display')
+    url(r'resume/$', views.form_submit, name = 'Resume display'),
+    url(r'resume.json/$', views.form_json, name = 'resume.json')
 ]
