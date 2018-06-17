@@ -25,7 +25,9 @@ SECRET_KEY = 'p*7+&9dism5yc5o3yro=*7wb9v^fiy62y#ct85y#00#z88(i!4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cv-generator.herokuapp.com',
+                  '127.0.0.1'
+                  ]
 
 
 # Application definition
