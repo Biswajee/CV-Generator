@@ -21,7 +21,7 @@ def signup(request):
 
 def signupinfo(request):
     if request.method == 'POST':
-        email = request.POST.get['email']
+        email = request.POST['email']
         user_id = request.session["uid"]
         password = request.POST['password']
         phone = request.POST['phone']
@@ -31,7 +31,8 @@ def signupinfo(request):
                                  email=email,
                                  password=password,
                                  phone=phone,
-                                 name=name)
+                                 name=name,
+                                 date=date.today())
         user_reg_data.save()
 
 
@@ -51,16 +52,16 @@ def signin(request):
 def verify(request):
     try :
         if request.method == 'POST':
-                email = request.POST.get('email','empty')
-                password=request.POST.get('password','empty')
-                if reg_info.objects.get(Q(email = email ) & Q(password=password)):
-                    return HttpResponse((loader.get_template('fillform.html')).render({'name':(reg_info.objects.get(Q(email = email) & Q(password = password))).name}, request))
-                else:
-                    return render(request, 'webpages/signin.html',{'data': "Login Unsuccessful"})
+            email = request.POST.get('email','empty')
+            password=request.POST.get('password','empty')
+            if reg_info.objects.get(Q(email = email ) & Q(password=password)):
+                return HttpResponse((loader.get_template('webpages/fillform.html')).render({'name':(reg_info.objects.get(Q(email = email) & Q(password = password))).name}, request))
+            else:
+                return render(request, 'webpages/signin.html',{'data': "Login Unsuccessful"})
         else:
             return render(request, 'webpages/signin.html',{'data': "Login Unsuccessful"})
     except :
-        return render(request, 'webpages/signin.html',{'data': "Login Unsuccessful"})
+        return render(request, 'webpages/signin.html',{'data': "Technical Error occured !"})
 
 
 def formfill(request):
