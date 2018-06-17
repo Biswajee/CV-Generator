@@ -41,4 +41,3 @@ class resume_data():
     xp_4_title = models.TextField()
     xp_5_title = models.TextField()
     xp_6_title = models.TextField()
-    
