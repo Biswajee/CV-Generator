@@ -210,8 +210,3 @@ def form_submit(request):
         return render(request, 'webpages/good_resume.html', context)
     else:
         return render(request, 'webpages/fillform.html')
-
-
-def form_json(request):
-    result = jsonify(context)
-    return result

@@ -19,5 +19,6 @@ import re
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'', include('webapp.urls'))
+    path(r'', include('webapp.urls')),
+    path('api/', include('api.urls'))
 ]
