@@ -76,6 +76,9 @@ def read_docs(request):
 def form_submit(request):
 
     if request.method == 'POST':
+
+        user_id = request.session["uid"]
+
         # Introduction vars
         name = request.POST['nm']
         position = request.POST['position']
@@ -160,7 +163,8 @@ def form_submit(request):
                                 xp_3_desc=xp_3_desc,
                                 xp_4_desc=xp_4_desc,
                                 xp_5_desc=xp_5_desc,
-                                xp_6_desc=xp_6_desc
+                                xp_6_desc=xp_6_desc,
+                                usr_id_id=user_id
                                 )
         user_data.save()
 
@@ -200,6 +204,7 @@ def form_submit(request):
                 'xp_4_desc': xp_4_desc,
                 'xp_5_desc': xp_5_desc,
                 'xp_6_desc': xp_6_desc,
+                'user_id': user_id
                     }
 
         return render(request, 'webpages/good_resume.html', context)
