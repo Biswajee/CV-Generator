@@ -32,7 +32,7 @@ def signupinfo(request):
                                  password=password,
                                  phone=phone,
                                  name=name,
-                                 date=date.today())
+                                 date=datetime.now())
         user_reg_data.save()
 
 

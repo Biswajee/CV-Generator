@@ -31,7 +31,7 @@ class resume_data(models.Model):
     cph = models.TextField()
     cemail = models.TextField()
     desc = models.TextField()
-    cgpa = models.TextField(unique=True)
+    cgpa = models.TextField()
     skill_1 = models.TextField()
     skill_2 = models.TextField()
     skill_3 = models.TextField()
