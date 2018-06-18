@@ -160,7 +160,7 @@ def form_submit(request):
                                 xp_3_desc=xp_3_desc,
                                 xp_4_desc=xp_4_desc,
                                 xp_5_desc=xp_5_desc,
-                                xp_6_desc=xp_6_desc,
+                                xp_6_desc=xp_6_desc
                                 )
         user_data.save()
 

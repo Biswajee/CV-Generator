@@ -18,7 +18,7 @@ class reg_info(models.Model):
     def __str__(self):
         return (self.usr_id+'\n'+self.date+'\n'+self.email+'\n'+self.password+'\n'+self.date)
 
-class resume_data():
+class resume_data(models.Model):
     # usr_id must be foreign key for reg_info table's usr_id.
     usr_id = models.ForeignKey(reg_info, on_delete=models.CASCADE)
 
