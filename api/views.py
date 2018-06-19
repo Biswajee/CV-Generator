@@ -6,5 +6,6 @@ from django.http import HttpResponse
 
 def json_endpoint(request):
     db_data = resume_data.objects.all()
+    print(resume_data.objects.all())
     response = HttpResponse(db_data)
     return response
