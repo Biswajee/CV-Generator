@@ -28,7 +28,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Slab" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.min.css' %}" />
-
+  <script>
+  function closebtn(){
+    document.getElementById("notice").remove();
+  }
+  </script>
 
 
   <style>
@@ -68,6 +72,12 @@
   <form action="../resume/" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <div class = "row pad-down pad-form-center">
+      <div class="container text-center red" id="notice">
+        {{ notice }}
+        <button type="button" class="close" aria-label="Close" onclick="closebtn()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <div class="col-md-5 col-sm-5 offset-sm-4 text-left bg-white borderify-login pad-lil">
         <div class = "col-md-12 col-sm-12 text-center">
           <h1 class="head-banner-text">General information</h1>
@@ -209,7 +219,6 @@
                   </div>
                 </div>
               </div>
-
 
 
 

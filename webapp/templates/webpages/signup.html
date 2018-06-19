@@ -32,7 +32,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Slab" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" />
-
+  <script>
+  function closebtn(){
+    document.getElementById("notice").remove();
+  }
+  </script>
 
 
   <style>
@@ -70,8 +74,13 @@
       <div class="row pad-form-center">
         <div class="col-md-5 col-sm-5 offset-sm-4 text-center bg-white borderify-login">
           <form action="/webapp/signup_creds/" method="post" style="padding-bottom: 20px;">
-
-            <p class="text-center">Create a  <b>New user Account. {{data}}</b></p>
+            <p class="text-center red">
+              {{ error }}
+              <button type="button" class="close" aria-label="Close" onclick="closebtn()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </p>
+            <p class="text-center">Create a  <b>New user Account.</b></p>
             {% load widget_tweaks %}
             {% csrf_token %}
             {{ form.non_field_errors }}

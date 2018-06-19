@@ -33,7 +33,11 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Slab" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" />
 
-
+  <script>
+  function closebtn(){
+    document.getElementById("notice").remove();
+  }
+  </script>
 
   <style>
         body {
@@ -72,7 +76,12 @@
               <form action="../verify/" method="post" style="padding-bottom: 20px;">
                 {% csrf_token %}
                 <p class="text-center">Log in to  <b>your account.</b></p>
-                  <p class="text-center red">{{data}}</p>
+                  <p class="text-center red">
+                    {{data}}
+                    <button type="button" class="close" aria-label="Close" onclick="closebtn()">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </p>
                   <div class="input-group">
                     <span class="input-group-text"><i class="fa fa-envelope fa-pad"></i>Email</span>
                       <input id="email" type="email" class="form-control has-success has-feedback" name="email" placeholder="Enter Email"><br />

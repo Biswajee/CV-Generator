@@ -94,7 +94,34 @@ class resume_data(models.Model):
                     },
                 'Academic Qualification': {
                             'cgpa': self.cgpa
-                    }
-
+                    },
+                'Skills': {
+                        'Skill 1': self.skill_1,
+                        'Skill 2': self.skill_2,
+                        'Skill 3': self.skill_3,
+                        'Skill 4': self.skill_4,
+                        'Skill 5': self.skill_5,
+                        'Skill 6': self.skill_6
+                },
+                'Experience': {
+                        'Experience 1': self.xp_1_title,
+                        'Description 1': self.xp_1_desc,
+                        'Session 1': self.xp_1_session,
+                        'Experience 2': self.xp_2_title,
+                        'Description 2': self.xp_2_desc,
+                        'Session 2': self.xp_2_session,
+                        'Experience 3': self.xp_3_title,
+                        'Description 3': self.xp_3_desc,
+                        'Session 3': self.xp_3_session,
+                        'Experience 4': self.xp_4_title,
+                        'Description 4': self.xp_4_desc,
+                        'Session 4': self.xp_4_session,
+                        'Experience 5': self.xp_5_title,
+                        'Description 5': self.xp_5_desc,
+                        'Session 5': self.xp_5_session,
+                        'Experience 6': self.xp_6_title,
+                        'Description 6': self.xp_6_desc,
+                        'Session 6': self.xp_6_session
+                }
                 }
         return jsonify(data)
