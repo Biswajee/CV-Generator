@@ -9,7 +9,7 @@ An API support for this application is being developed which helps distribution 
 + online advertisement agencies to publicize individuals so that they get hired.
 
 With a traditional resume, the above goals are either inaccurate or cannot be used in above fields.
-For example, a person's name could be a skill. [(say, Ruby !)](https://en.wikipedia.org/wiki/Ruby_(given_name)
+For example, a person's name could be a skill. [(say, Ruby !)](https://en.wikipedia.org/wiki/Ruby_(given_name))
 
 And advertisement before HRs with your skills are always a good way to upsell yourself ! :P
 
