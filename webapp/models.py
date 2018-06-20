@@ -81,6 +81,7 @@ class resume_data(models.Model):
     #            +'\n'+self.xp_4_title+'\n'+self.xp_5_title+'\n'+self.xp_6_title+'\n'+self.xp_1_desc+'\n'+self.xp_2_desc+'\n'+self.xp_3_desc+'\n'+self.xp_4_desc+'\n'+self.xp_5_desc+'\n'+self.xp_6_desc)
     #            +'\n'+self.xp_1_session+'\n'+self.xp_2_session+'\n'+self.xp_3_session+'\n'+self.xp_4_session+'\n'+self.xp_5_session+'\n'+self.xp_6_session)
         data = {
+                'User ID': self.usr_id,
                 'General information': {
                             'name': self.name,
                             'position': self.position,
