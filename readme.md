@@ -286,3 +286,6 @@ Once you are done with exploration, you may shut down the server with :
     + The database might not be created.
     + Cookies are disabled in browser.
     
+## Once step deploy
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
