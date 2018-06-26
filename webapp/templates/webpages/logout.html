@@ -1,0 +1,78 @@
+<!doctype html> {% load staticfiles %}
+<html lang="en">
+
+<head>
+
+    <title>
+        Logout - CV Generator
+    </title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta title="Bag your first impression with impressive resume at your fingertips !" />
+    <meta name="description" content="Generate your resume just by filling up a application form or a survey about you ! Yes, we'll take care of all formatting ! Get a better niche with this lucid curriculum vitae !" />
+    <meta name="keywords" content="cv, resume, curriculum vitae, generate resume, my resume, cv generator, application, generate" />
+    <meta name="theme-color" content="#f2920c" />
+    <link href="{% static 'images/favicon.png' %}" rel="shortcut icon">
+
+    <!-- Core CSS files -->
+
+    <!--<script src="js/jquery.min.js"></script>-->
+
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/static/js/parallax.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+    <script src="/static/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/custom_css.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Slab" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script async defer src="https://buttons.github.io/buttons.js">
+    </script>
+    <script>
+        function closebtn() {
+            document.getElementById("notice").remove();
+        }
+    </script>
+
+    <style>
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-white nav navbar-nav navbar-fixed-top nav-header">
+        <span class="links-header pull-left" style="height: 0px;">
+            <a href="../index" class="sharpUnity fa-2x black" id="resume">CV Generator</a>
+        </span>
+        <span class="links-header text-right">
+            <a class="github-button" href="https://github.com/Biswajee/CV-Generator/fork" data-icon="octicon-repo-forked" aria-label="Fork Biswajee/CV-Generator on GitHub">Fork</a>
+            </a>
+            <a href="https://github.com/biswajee" id="github">
+                <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+            </a>
+        </span>
+    </nav>
+    <div class="row">
+        <div class="col--md-12 col-sm-12 text-center">
+            <h1 class="head-banner-text">
+                You are Successfully Logged out of Account ID: {{user_id}}.
+            </h1>
+            <button class="btn btn-warning">Go to Home Page</button>
+        </div>
+    </div>
+</body>
+
+</html>

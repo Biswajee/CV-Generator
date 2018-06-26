@@ -216,3 +216,10 @@ def form_submit(request):
             return render(request, 'webpages/fillform.html', {'notice': "Form accepts POST Requests only"})
     except:
         return render(request, 'webpages/fillform.html', {'notice': "Please fill all fields correctly"})
+
+def logout():
+    try:
+        user_id = request.session["uid"]
+        return render(request, 'webpages/logout', {user_id})
+    except:
+        return render(request, 'webpages/logout', {user_id})
