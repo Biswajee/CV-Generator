@@ -28,26 +28,42 @@ After you've cloned this repository, let's verify the folder structure.
 
         .
         │   .gitignore
+        │   .travis.yml
+        │   CONTRIBUTING.md
         │   credentials.txt
         │   db.sqlite3
+        │   LICENSE
         │   manage.py
         │   Procfile
         │   readme.md
         │   requirements.txt
         │
+        ├───.github
+        │   └───ISSUE_TEMPLATE
+        │           bug_report.md
+        │           feature_request.md
+        │
+        ├───.vscode
+        │       settings.json
+        │
         ├───api
         │   │   admin.py
         │   │   apps.py
         │   │   models.py
+        │   │   README.md
         │   │   tests.py
         │   │   urls.py
         │   │   views.py
         │   │   __init__.py
         │   │
         │   ├───migrations
-        │   │       __init__.py
+        │   │   │   __init__.py
+        │   │   │
+        │   │   └───__pycache__
+        │   │           __init__.cpython-36.pyc
         │   │
         │   └───__pycache__
+        │           tests.cpython-36.pyc
         │           urls.cpython-36.pyc
         │           views.cpython-36.pyc
         │           __init__.cpython-36.pyc
@@ -91,6 +107,7 @@ After you've cloned this repository, let's verify the folder structure.
         │   │   0015_auto_20180619_0432.py
         │   │   0016_auto_20180619_0442.py
         │   │   0017_auto_20180619_0451.py
+        │   │   0018_auto_20180626_1218.py
         │   │   __init__.py
         │   │
         │   └───__pycache__
@@ -111,118 +128,23 @@ After you've cloned this repository, let's verify the folder structure.
         │           0015_auto_20180619_0432.cpython-36.pyc
         │           0016_auto_20180619_0442.cpython-36.pyc
         │           0017_auto_20180619_0451.cpython-36.pyc
+        │           0018_auto_20180626_1218.cpython-36.pyc
         │           __init__.cpython-36.pyc
         │
         ├───static
         │   ├───css
-        │   │   │   bootstrap.css
-        │   │   │   custom_css.css
-        │   │   │   main2.css
-        │   │   │   slick.css
-        │   │   │
-        │   │   ├───font-awesome-4.7.0
-        │   │   │   ├───css
-        │   │   │   │       font-awesome.min.css
-        │   │   │   │       font-awesome1.css
-        │   │   │   │
-        │   │   │   ├───fonts
-        │   │   │   │       fontawesome-webfont.svg
-        │   │   │   │       fontawesome-webfont.woff
-        │   │   │   │       fontawesome-webfont.woff2
-        │   │   │   │       FontAwesome.otf
-        │   │   │   │
-        │   │   │   ├───less1
-        │   │   │   │       animated.less
-        │   │   │   │       bordered-pulled.less
-        │   │   │   │       core.less
-        │   │   │   │       fixed-width.less
-        │   │   │   │       font-awesome.less
-        │   │   │   │       icons.less
-        │   │   │   │       larger.less
-        │   │   │   │       list.less
-        │   │   │   │       mixins.less
-        │   │   │   │       path.less
-        │   │   │   │       rotated-flipped.less
-        │   │   │   │       screen-reader.less
-        │   │   │   │       stacked.less
-        │   │   │   │       variables.less
-        │   │   │   │
-        │   │   │   └───scss
-        │   │   │           font-awesome.scss
-        │   │   │           _animated.scss
-        │   │   │           _bordered-pulled.scss
-        │   │   │           _core.scss
-        │   │   │           _fixed-width.scss
-        │   │   │           _icons.scss
-        │   │   │           _larger.scss
-        │   │   │           _list.scss
-        │   │   │           _mixins.scss
-        │   │   │           _path.scss
-        │   │   │           _rotated-flipped.scss
-        │   │   │           _screen-reader.scss
-        │   │   │           _stacked.scss
-        │   │   │           _variables.scss
-        │   │   │
-        │   │   └───slick-1.8.0
-        │   │       │   .gitignore
-        │   │       │   bower.json
-        │   │       │   component.json
-        │   │       │   CONTRIBUTING.markdown
-        │   │       │   index.html
-        │   │       │   ISSUE_TEMPLATE.md
-        │   │       │   LICENSE
-        │   │       │   Makefile
-        │   │       │   package.json
-        │   │       │   README.markdown
-        │   │       │   slick.jquery.json
-        │   │       │
-        │   │       └───slick
-        │   │           │   ajax-loader.gif
-        │   │           │   config.rb
-        │   │           │   slick-theme.css
-        │   │           │   slick-theme.less
-        │   │           │   slick-theme.scss
-        │   │           │   slick.css
-        │   │           │   slick.less
-        │   │           │   slick.scss
-        │   │           │
-        │   │           └───fonts
-        │   │                   slick.svg
-        │   │                   slick.woff
+        │   │       bootstrap.css
+        │   │       custom_css.css
         │   │
         │   ├───images
-        │   │       00000000383.jpg
-        │   │       00000000384.jpg
-        │   │       00000000385.jpg
         │   │       14.png
         │   │       3306.png
-        │   │       403244634.jpg
-        │   │       5130.png
-        │   │       56298615.jpg
-        │   │       apple-phone.png
-        │   │       django.png
-        │   │       EpicInstaller-7.9.2-unrealengine.msi
         │   │       favicon.png
-        │   │       location-vector-img.png
-        │   │       mdscene.jpg
-        │   │       mobile.png
         │   │       pbeach.jpg
-        │   │       resumeicon.png
-        │   │       sFj7Wme.png
-        │   │       slide1.jpg
-        │   │       Unreal Engine 4 Tutorial for Beginners - Free UE4 Training.mp4.crdownload
-        │   │       Your-payment.jpg
         │   │
         │   └───js
         │           bootstrap.js
-        │           jquery.min.js
-        │           jquery.scrollex.min.js
-        │           jquery.scrolly.min.js
-        │           main.js
         │           parallax.min.js
-        │           skel.min.js
-        │           slick.js
-        │           util.js
         │
         ├───templates
         │   └───webpages
@@ -231,17 +153,20 @@ After you've cloned this repository, let's verify the folder structure.
         │           good_resume.html
         │           header.html
         │           index.html
+        │           logout.html
         │           read_docs.html
         │           signin.html
         │           signup.html
         │           signupdata.html
         │
         └───__pycache__
-              admin.cpython-36.pyc
-              models.cpython-36.pyc
-              urls.cpython-36.pyc
-              views.cpython-36.pyc
-              __init__.cpython-36.pyc
+            admin.cpython-36.pyc
+            models.cpython-36.pyc
+            tests.cpython-36.pyc
+            urls.cpython-36.pyc
+            views.cpython-36.pyc
+            __init__.cpython-36.pyc
+
 
 ## Feedback
 
@@ -285,7 +210,6 @@ Once you are done with exploration, you may shut down the server with :
     Possible reasons:
     + The database might not be created.
     + Cookies are disabled in browser.
-    
+
 ## Once step deploy
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
