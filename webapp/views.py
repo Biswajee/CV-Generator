@@ -217,10 +217,10 @@ def form_submit(request):
     except:
         return render(request, 'webpages/fillform.html', {'notice': "Please fill all fields correctly"})
 
-def logout():
+def logout(request):
     try:
         request.session.modified = True
         del request.session["uid"]
         return render(request, 'webpages/logout.html')
     except:
-        return render(request, 'webpages/logout.html', {message: "You are already logged out", style: "none"})
+        return render(request, 'webpages/logout.html', {'message': "You are already logged out", 'style': "none"})
