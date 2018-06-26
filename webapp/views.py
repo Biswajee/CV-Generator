@@ -219,7 +219,8 @@ def form_submit(request):
 
 def logout():
     try:
-        user_id = request.session["uid"]
-        return render(request, 'webpages/logout', {user_id})
+        request.session.modified = True
+        del request.session["uid"]
+        return render(request, 'webpages/logout.html')
     except:
-        return render(request, 'webpages/logout', {user_id})
+        return render(request, 'webpages/logout.html', {message: "You are already logged out", style: "none"})
