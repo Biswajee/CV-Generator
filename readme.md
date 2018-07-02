@@ -1,4 +1,6 @@
-# CV-Generator [![Build Status](https://travis-ci.org/Biswajee/CV-Generator.svg?branch=master)](https://travis-ci.org/Biswajee/CV-Generator) [![Requirements Status](https://requires.io/github/Biswajee/CV-Generator/requirements.svg?branch=master)](https://requires.io/github/Biswajee/CV-Generator/requirements/?branch=master) [![Code Health](https://landscape.io/github/Biswajee/CV-Generator/master/landscape.svg?style=flat)](https://landscape.io/github/Biswajee/CV-Generator/master)
+# CV-Generator 
+
+[![Build Status](https://travis-ci.org/Biswajee/CV-Generator.svg?branch=master)](https://travis-ci.org/Biswajee/CV-Generator) [![Requirements Status](https://requires.io/github/Biswajee/CV-Generator/requirements.svg?branch=master)](https://requires.io/github/Biswajee/CV-Generator/requirements/?branch=master) [![Code Health](https://landscape.io/github/Biswajee/CV-Generator/master/landscape.svg?style=flat)](https://landscape.io/github/Biswajee/CV-Generator/master)
 
 
 ## About this repository
