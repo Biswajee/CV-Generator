@@ -1,4 +1,5 @@
-# CV-Generator [![Build Status](https://travis-ci.org/Biswajee/CV-Generator.svg?branch=master)](https://travis-ci.org/Biswajee/CV-Generator)
+# CV-Generator [![Build Status](https://travis-ci.org/Biswajee/CV-Generator.svg?branch=master)](https://travis-ci.org/Biswajee/CV-Generator) [![Requirements Status](https://requires.io/github/Biswajee/CV-Generator/requirements.svg?branch=master)](https://requires.io/github/Biswajee/CV-Generator/requirements/?branch=master) [![Code Health](https://landscape.io/github/Biswajee/CV-Generator/master/landscape.svg?style=flat)](https://landscape.io/github/Biswajee/CV-Generator/master)
+
 
 ## About this repository
 This repository is a live web app deployed on Heroku. [Click here](https://resumenow.herokuapp.com) to visit the web application. This web application helps users create resumes by logging into their account and filling up their details.
