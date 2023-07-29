@@ -1,0 +1,67 @@
+{% extends "header.html" %}
+{% block title %}CV Generator - Home{% endblock %}
+{% block content %}
+
+<div class="landing-banner parallax-window" data-parallax="scroll" data-image-src="/static/images/pbeach.jpg">
+  <div class="overlay">
+    <div class="row pad-form-center">
+      <div class="col-md-5 col-sm-5 offset-sm-4 text-center bg-white borderify-login">
+        <form action="/signup_creds/" method="post" style="padding-bottom: 20px;">
+          <p class="text-center red">
+            {{ error }}
+            <button type="button" class="close" aria-label="Close" onclick="closebtn()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </p>
+          <p class="text-center">Create a <b>New user Account.</b></p>
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+          <div class="input-group">
+            {{ form.fst_name.errors }}
+            {{ form.lst_name.errors }}
+            <span class="input-group-text"><i class="fa fa-address-card fa-pad"></i>Name</span>
+            <input id="name" type="text" class="form-control has-success has-feedback" name="name"
+              placeholder="Enter name">
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            {{ form.eml.errors }}
+            <span class="input-group-text"><i class="fa fa-envelope fa-pad"></i>Email</span>
+            <input id="email" type="email" class="form-control has-success has-feedback" name="email"
+              placeholder="Email">
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-lock fa-pad"></i>Password</span>
+            <input id="password" type="password" class="form-control has-success has-feedback" name="password"
+              placeholder="Password">
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-phone fa-pad"></i>Phone</span>
+            <input id="phone" type="number" class="form-control has-success has-feedback" name="phone"
+              placeholder="Enter phone number"><br />
+          </div>
+
+          <br>
+
+          <p style="font-size: 0.7rem; padding-top: 3px; align: right">Already have an account ? <a
+              href="../signin/">Sign in</a></p>
+
+          <br>
+
+          <!--<progress class="progress-bar-animated"></progress>-->
+
+          <button class="btn btn-success" type="submit" value="Submit" name="submit">Register now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

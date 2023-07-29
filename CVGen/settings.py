@@ -115,7 +115,5 @@ STATIC_URL = "/static/"
 
 STATIC_ROOT = os.path.join(f"{BASE_DIR}", "Webapp")
 STATICFILES_DIRS = [
-    os.path.join(STATIC_ROOT, "static/css"),
     os.path.join(STATIC_ROOT, "static/images"),
-    os.path.join(STATIC_ROOT, "static/js"),
 ]

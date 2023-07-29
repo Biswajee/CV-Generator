@@ -1,0 +1,11 @@
+{% extends "header.html" %}
+{% block title %}CV Generator - Home{% endblock %}
+{% block content %}
+
+<div class="container pad pad-down">
+  <h2 class="head-banner-text" {{error}}</h2>
+    <h2 class="head-banner-text">Your account user id is: {{user_id}}.</h2>
+    <h2 class="head-banner-text">Your account email address is: {{email}}.</h2>
+    <h2 class="head-banner-text text-center pad">Head to <a href="../signin/">Sign in</a></h2>
+</div>
+{% endblock %}

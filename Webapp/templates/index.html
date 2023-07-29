@@ -1,0 +1,73 @@
+{% extends "header.html" %}
+{% block title %}CV Generator - Home{% endblock %}
+{% block content %}
+{% load static %}
+<div class="landing-banner parallax-window" data-parallax="scroll" data-image-src="{% static 'images/14.png' %}">
+  <div class="overlay">
+    <div class="row pad-form-center">
+      <div class="col-md-4 col-sm-4 offset-sm-1 text-center bg-white borderify-login">
+        <form action="../verify/" method="post" style="padding-bottom: 20px;">
+          {% csrf_token %}
+          <p class="text-center">Enter your <b>Login Credentials.</b></p>
+          <p class="text-center red">
+            {{data}}
+            <button type="button" class="close" aria-label="Close" onclick="closebtn()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </p>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-user-o fa-pad"></i>Username</span>
+            <input id="email" type="email" class="form-control has-success has-feedback" name="email"
+              placeholder="Email"><br />
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa fa-lock fa-pad"></i>Password</span>
+            <input id="password" type="password" class="form-control has-success has-feedback" name="password"
+              placeholder="Password"><br />
+          </div>
+          <p style="font-size: 0.7rem; padding-top: 3px; text-decoration: underline;"><a
+              href="../signup/">Create an account</a></p>
+
+          <br>
+
+          <button class="btn btn-success" type="submit" value="Submit" name="submit">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row pad pad-down">
+  <div class="col-md-12 col-sm-12 text-center">
+    <h1 class="head-banner-text">
+      Generate your key to success <i class="fa fa fa-file text-success"></i> with CV Generator !
+    </h1>
+  </div>
+</div>
+
+
+<br><br><br>
+
+<div class="row padmini pad-down parallax-window" data-parallax="scroll"
+  data-image-src="{% static 'images/3306.png' %}">
+  <div class="col-md-12 col-sm-12 text-center">
+    <h1 class="head-banner-text">
+      How it works ?
+    </h1>
+    <h2 style="font-size: 1.5rem;">
+      Well, you share your professional information in a form that we ask you to fill up in order to get a resume.
+      You fill up the required details. Be very sincere while filling up because falsification / misleading information
+      leads to
+      bad impression. <br /><br /> We furthur ask you in case you wish to share this information with some of our
+      potential recruiters.
+      Please feel free to view some testimonials <a href="#">here</a>. <br /><br />We send your personal information to
+      a cloud storage and
+      this dynamically generates a webpage with your personal information. Feel interested ? <a
+        href="../read-docs/">Read more... </a>
+    </h2>
+  </div>
+</div>
+{% endblock %}

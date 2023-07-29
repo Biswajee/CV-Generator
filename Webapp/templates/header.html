@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="theme-color" content="#f2920c" />
+    {% load static %}
+    <link href="{% static 'images/favicon.png' %}" rel="shortcut icon">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom_css.css' %}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Slab" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css" />
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-size: auto;
+        }
+
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .navbar-fixed-top {
+            position: fixed;
+            width: 100%;
+            z-index: 500;
+        }
+
+        .links-header {
+            display: inline-block;
+        }
+
+        .nav-header {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            box-shadow: 0px 6px 20px 0px black;
+        }
+
+        .top_title {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .overlay-left {
+            padding-left: 100px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .pad {
+            padding-top: 100px;
+        }
+
+        .padmini {
+            padding-top: 50px;
+        }
+
+        .pad-extra {
+            padding-top: 150px;
+        }
+
+        .pad-down {
+            padding-bottom: 100px;
+        }
+
+        .padlil {
+            padding-bottom: 70px;
+        }
+
+        .borderify-login {
+            border-radius: 20px;
+            padding-top: 20px;
+        }
+
+        .fa-pad {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .pad-form-center {
+            padding-top: 150px;
+        }
+
+        .head-banner-text {
+            font-size: 3.2rem;
+            font-family: 'Josefin Slab', serif;
+        }
+
+        .red {
+            color: red !important;
+        }
+
+        .blue {
+            color: blue !important;
+        }
+    </style>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-white nav navbar-nav navbar-fixed-top nav-header">
+        <span class="links-header pull-left" style="height: 0px;">
+            <a href="../" class="sharpUnity fa-2x black" id="resume">CV Generator</a>
+        </span>
+        <span class="links-header text-right">
+            <a href="../signin/" class="sharpUnity fa-2x black remove_U" id="mail">
+                Sign in
+            </a>
+            <a href="https://github.com/biswajee" id="github">
+                <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+            </a>
+        </span>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    {% include "footer.html" %}
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.tutorialjinni.com/parallax.js/1.5.0/parallax.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</html>

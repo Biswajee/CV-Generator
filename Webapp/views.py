@@ -9,11 +9,11 @@ context = {}
 
 
 def index(request):
-    return render(request, "webpages/index.html")
+    return render(request, "index.html")
 
 
 def signup(request):
-    return render(request, "webpages/signup.html")
+    return render(request, "signup.html")
 
 
 def signupinfo(request):
@@ -28,24 +28,24 @@ def signupinfo(request):
             registration.save()
 
             user_signup_info = {"email": email, "user_id": registration.id}
-            return render(request, "webpages/signupdata.html", user_signup_info)
+            return render(request, "signupdata.html", user_signup_info)
         else:
             return render(
                 request,
-                "webpages/signup.html",
+                "signup.html",
                 {"error": "Some error occoured ! Check back later."},
             )
     except:
         return render(
-            request, "webpages/signup.html", {"error": "Email ID is already registered !"}
+            request, "signup.html", {"error": "Email ID is already registered !"}
         )
 
 
 def signin(request):
     if request.user.is_authenticated:
-        return redirect("webpages/fillform.html")
+        return redirect("fillform.html")
     else:
-        return render(request, "webpages/signin.html")
+        return render(request, "signin.html")
 
 
 def verify(request):
@@ -55,29 +55,29 @@ def verify(request):
             password = request.POST.get("password", "empty")
             if User.objects.get(Q(email=email) & Q(password=password)):
                 return HttpResponse(
-                    (loader.get_template("webpages/fillform.html")).render(
+                    (loader.get_template("fillform.html")).render(
                         {"name": (User.objects.get(Q(email=email) & Q(password=password))).name},
                         request,
                     )
                 )
             else:
-                return render(request, "webpages/signin.html", {"data": "Login Unsuccessful"})
+                return render(request, "signin.html", {"data": "Login Unsuccessful"})
         else:
-            return render(request, "webpages/signin.html", {"data": "Login Unsuccessful"})
+            return render(request, "signin.html", {"data": "Login Unsuccessful"})
     except:
-        return render(request, "webpages/signin.html", {"data": "Technical Error occured !"})
+        return render(request, "signin.html", {"data": "Technical Error occured !"})
 
 
 def formfill(request):
-    return render(request, "webpages/fillform.html")
+    return render(request, "fillform.html")
 
 
 def profile(request):
-    return render(request, "webpages/signin.html")
+    return render(request, "signin.html")
 
 
 def read_docs(request):
-    return render(request, "webpages/read_docs.html")
+    return render(request, "read_docs.html")
 
 
 def form_submit(request):
@@ -212,24 +212,24 @@ def form_submit(request):
                 "user_id": user_id,
             }
 
-            return render(request, "webpages/good_resume.html", context)
+            return render(request, "good_resume.html", context)
         else:
             return render(
-                request, "webpages/fillform.html", {"notice": "Form accepts POST Requests only"}
+                request, "fillform.html", {"notice": "Form accepts POST Requests only"}
             )
     except:
         return render(
-            request, "webpages/fillform.html", {"notice": "Please fill all fields correctly"}
+            request, "fillform.html", {"notice": "Please fill all fields correctly"}
         )
 
 
 def logout(request):
     try:
         request.session.modified = True
-        return render(request, "webpages/logout.html")
+        return render(request, "logout.html")
     except:
         return render(
             request,
-            "webpages/logout.html",
+            "logout.html",
             {"message": "You are already logged out", "style": "none"},
         )
