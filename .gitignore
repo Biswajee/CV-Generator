@@ -1,1 +1,10 @@
-./credentials.txt
+# Editor configurations
+.vscode/
+.idea/
+
+# Python compiled binaries
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/

@@ -1,6 +1,5 @@
-from django.conf.urls import url, re_path
+from django.urls import path
+
 from . import views
 
-urlpatterns = [
-    url(r'^$', views.json_endpoint, name = 'json response')
-]
+urlpatterns = [path("", views.json_endpoint, name="json response")]
