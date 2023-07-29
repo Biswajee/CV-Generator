@@ -8,5 +8,7 @@ The project is built using Django and uses a bit of CSS and JS.
 # Requirements
 
 1. Python 3
-2. MySQL 8 or above
 
+# Badges
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/4988e2ac2ed01ee28f53/maintainability)](https://codeclimate.com/github/Biswajee/CV-Generator/maintainability)
