@@ -1,6 +1,6 @@
 from django.db.models import Q
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 from django.template import loader
 
 from .models import User, UserData
@@ -24,12 +24,7 @@ def signupinfo(request):
             phone = request.POST["phone"]
             name = request.POST["name"]
 
-            registration = User(
-                email=email,
-                password=password,
-                phone=phone,
-                name=name,
-            )
+            registration = User(email=email, password=password, phone=phone, name=name)
             registration.save()
 
             user_signup_info = {"email": email, "user_id": registration.id}
@@ -61,11 +56,7 @@ def verify(request):
             if User.objects.get(Q(email=email) & Q(password=password)):
                 return HttpResponse(
                     (loader.get_template("webpages/fillform.html")).render(
-                        {
-                            "name": (
-                                User.objects.get(Q(email=email) & Q(password=password))
-                            ).name
-                        },
+                        {"name": (User.objects.get(Q(email=email) & Q(password=password))).name},
                         request,
                     )
                 )
