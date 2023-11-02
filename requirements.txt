@@ -1,4 +1,4 @@
-Django==4.2.3
+Django==4.2.7
 itsdangerous==2.1.2
 Jinja2==3.1.2
 tzdata==2023.3
